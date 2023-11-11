@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise for Disala</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #ff69b4;
+            padding: 1em;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        #surprise-container {
+            margin: 2em;
+            padding: 2em;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #message {
+            font-size: 1.2em;
+            margin-bottom: 1em;
+        }
+
+        #heart {
+            font-size: 3em;
+            color: #ff69b4;
+        }
+
+        html {
+            background: rgba(15, 156, 60, 0.5);
+        }
+
+        p {
+            text-align: center;
+            font-size: 32px;
+            font-family: Candara, Oswald;
+            color: rgb(191, 38, 63);
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 25%;
+        }
+
+        .custom-button {
+            display: inline-block;
+            padding: 12px 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: 2px solid #4CAF50;
+            color: #fff;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .custom-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Add this to your existing styles or create a new style block */
+
+        @keyframes sparkle {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .sparkle-button {
+            position: relative;
+        }
+
+        .sparkle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 80%);
+            opacity: 0;
+            transform: scale(0);
+            animation: sparkle 0.5s linear;
+        }
+
+        /* Adjust the color, size, and other properties as needed */
+
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .fireworks-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #f00;
+            /* Firework color */
+            border-radius: 50%;
+            opacity: 0;
+            animation: explode 0.5s ease-out;
+        }
+
+        @keyframes explode {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(5);
+                opacity: 0;
+            }
+        }
+    </style>
+        <body>
+        <p>Can we hang out soon?</p>
+        <img src="https://media.tenor.com/zGm5acSjHCIAAAAM/cat-begging.gif">
+        </body>
+        <style>
+            #botao1 {
+            position: fixed;
+            top: 70%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            }
+            #botao2 {
+            position: absolute;
+             left: 39%;
+              top: 68%;
+            }
+            </style>
+</head>
+
+<body>
+    <header>
+        <h1>Special Surprise is waiting for You......!</h1>
+    </header>
+
+    <div id="surprise-container">
+        <div id="message">
+            <p>Dear Disala,</p>
+           
+   
+
+                <div class="fireworks-container"></div>
+                <button class="custom-button sparkle-button" onclick="addSparkle(), startFireworks()" id="botao1">YES BBY!</button>
+                <button class="custom-button" id="botao2" style="background-color: red;">NO</button>
+                <script>
+                const button2 = document.getElementById('botao2');
+                let left = 40;
+                button2.addEventListener('mouseover', function() {
+                  if(left == 40){
+                    left = 44;
+                  }else{
+                    left = 40;
+                  }
+                  this.style.left = left + '%';
+                });
+                
+                </script>
+                <script>
+                document.getElementById('botao1').addEventListener('click', function() {
+                alert('YAYY THANK U............!!!!  Call Me - 0778032290');
+                
+                });
+                document.getElementById('botao2').addEventListener('click', function() {
+                alert('Aiyyyoooooo............!!!!');
+                });
+                </script>
+                
+                <script>
+                    function addSparkle() {
+                        const button = document.querySelector('.sparkle-button');
+                        const sparkle = document.createElement('div');
+                        sparkle.classList.add('sparkle');
+                        button.appendChild(sparkle);
+                
+                        // Remove the sparkle element after the animation ends
+                        sparkle.addEventListener('animationend', () => {
+                            sparkle.remove();
+                        });
+                    }
+                </script>
+                
+                <script>
+                    function startFireworks() {
+                        const container = document.querySelector('.fireworks-container');
+                
+                        // Create multiple fireworks
+                        for (let i = 0; i < 30; i++) {
+                            createFirework(container);
+                        }
+                    }
+                
+                    function createFirework(container) {
+                        const firework = document.createElement('div');
+                        firework.classList.add('firework');
+                
+                        // Set random position within the container
+                        firework.style.left = `${Math.random() * 100}vw`;
+                        firework.style.top = `${Math.random() * 100}vh`;
+                
+                        container.appendChild(firework);
+                
+                        // Remove the firework element after the animation ends
+                        firework.addEventListener('animationend', () => {
+                            firework.remove();
+                        });
+                    }
+                </script>
+                
+        </div>
+
+        <!-- You can add more content, images, or even a slideshow here -->
+
+        <script>
+            // You can add more interactive features using JavaScript
+            // For example, animations, pop-ups, etc.
+            // Here's a simple example of an alert:
+            setTimeout(() => {
+                alert("I'm patiently waiting for a response from this Arrogant and Stubborn lady!!!");
+            }, 5000); // Show the alert after 5 seconds
+        </script>
+
+        
+    </div>
+
+    
+</body>
+
+</html>
